@@ -176,48 +176,46 @@ class zeebuks(Flask):
 
     @app.route('/submitRequest', methods=['POST'])
     def submitRequest():
-            borrower = [] #list of tuples sa borrower i.e. [(EE131,Sir Rogs), (EE171,Maam Lambino)... , (EC170, Sir Z)]
             borroweditems = [] #list of tuples sa borrowed items i.e. [(121,10), ..., ]
             if request.method == 'POST':
                 with sqlite3.connect("ZeeSlipv2.sqlite") as con:
                     cur = con.cursor()
-                    cur.execute("INSERT INTO Request (subject,instructor) VALUES (?,?)", (subject, instructor))
-                    con.commit()
-                    cur.executemany("INSERT INTO Borrower(borrowerIdNumber,borrowerName,requestId) VALUES (?,?,(SELECT requestId FROM Request ORDER BY requestID DESC LIMIT 1))", borrower)
+                    cur.execute("INSERT INTO Request (idNumber,name,subject,requestDate) VALUES (?,?,?,?)", (idNumber,name,subject,"datetime(CURRENT_TIMESTAMP,'localtime')"))
                     con.commit()
                     cur.executemany("INSERT INTO BorrowedItem(itemId,itemQuantity,requestId) VALUES (?,?,(SELECT requestId FROM Request ORDER BY requestID DESC LIMIT 1))", borroweditems)
                     con.commit()
                     con.close()
             return redirect('dashboard/barrow')
 
-    @app.route('/releaseItems', methods=['POST'])
-    def releaseItems():
-        id = None #request id sa items na i release
-        borroweditems = []  # list of tuples sa borrowed items i.e. [(121,10), ..., ]
+    @app.route('/deleteRequest', methods=['POST'])
+    def deleteRequest():
         if request.method == 'POST':
-            with sqlite3.connect("ZeeSlipv2.sqlite") as con:
-                cur = con.cursor()
-                cur.execute("DELETE FROM BorrowedItem WHERE requestId = ?", id)
-                con.commit()
-                #ireplace daun sa final list sa items na hulamon
-                cur.execute("INSERT INTO BorrowedItem(itemId,itemQuantity,requestId) VALUES (?,?,?)", borroweditems.append(id))
-                con.commit()
-                #iupdate daun ang request
-                cur.execute("UPDATE Request SET releaseDate = CURRENT_TIMESTAMP WHERE requestId = ?", id)
-                con.commit()
-                con.close()
-        return redirect('dashboard/request')
+                with sqlite3.connect("ZeeSlipv2.sqlite") as con:
+                    cur = con.cursor()
+                    cur.execute("DELETE FROM Request WHERE requestId = ? AND EXISTS(SELECT requestId FROM (SELECT requestId FROM Request) LEFT JOIN (SELECT requestId as issuedRequestId FROM BorrowedItem WHERE issueDate IS NOT NULL) WHERE requestId != issuedRequestId)",requestId)
+                    con.commit()
+                    con.close()
+                return redirect('dashboard/request')
 
-    @app.route('/returnItems', methods=['POST'])
-    def returnItems():
-        id = None #request id sa items na i uli
-        if request.method == 'POST':
-            with sqlite3.connect("ZeeSlipv2.sqlite") as con:
-                cur = con.cursor()
-                cur.execute("UPDATE Request SET releaseDate = CURRENT_TIMESTAMP WHERE returnId = ?", id)
-                con.commit()
-                con.close()
-        return redirect('dashboard/request')
+    @app.route('/issueItem', methods=['GET'])
+    def issueItem():
+        con = sqlite3.connect("ZeeSlipv2.sqlite")
+        con.row_factory = sqlite3.Row
+
+        cur = con.cursor()
+        cur.execute("UPDATE BorrowedItem SET issueDate = datetime(CURRENT_TIMESTAMP,'localtime') WHERE borrowedItemId = ?", borrowedItemId)
+        con.commit()
+        con.close()
+
+    @app.route('/returnItem', methods=['GET'])
+    def returnItem():
+        con = sqlite3.connect("ZeeSlipv2.sqlite")
+        con.row_factory = sqlite3.Row
+
+        cur = con.cursor()
+        cur.execute("UPDATE BorrowedItem SET returnDate = datetime(CURRENT_TIMESTAMP,'localtime') WHERE borrowedItemId = ?",borrowedItemId)
+        con.commit()
+        con.close()
 
 
     @app.route('/addAccount', methods=['POST'])
