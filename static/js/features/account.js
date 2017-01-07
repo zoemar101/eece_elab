@@ -3,18 +3,13 @@
  */
 $(document).ready(function(){
     $("#addAcc").click(function(){
-        $.ajax({
-    		url: '/manAccount',
-    		type:"GET",
-    		data: {delid: id},
-    		success: function() {
+
 
 
 
                 $("#foraddAcc").show();
                 $("#formanAcc").hide();
-            }
-		});
+
 
 
     });
