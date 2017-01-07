@@ -24,13 +24,13 @@
             </thead>
         <tbody>
             <!-- Jinja Here: GET requests from DB -->
-            {% for r in rq %}
+            {% for r in req %}
             <tr data-toggle="modal" data-target="#{{ r[0] }}" onclick="getReq({{ r[0] }})">
-                <td>{{ r[0] }}</td>
                 <td>{{ r[1] }}</td>
-                <td>{{ r[2] }}</td>
                 <td>{{ r[3] }}</td>
-                <td>--</td>
+                <td>{{ r[4] }}</td>
+                <td>{{ r[11] }}</td>
+                <td>{{ r[12] }}</td>
                 <td>--</td>
             </tr>
             {% endfor %}
