@@ -31,7 +31,11 @@
                 <td>{{ r[4] }}</td>
                 <td>{{ r[11] }}</td>
                 <td>{{ r[12] }}</td>
-                <td>--</td>
+                {% if r[11] == None %}
+                <td>Pending</td>
+                {% else %}
+                <td>Release</td>
+                {% endif %}
             </tr>
             {% endfor %}
             </tbody>
