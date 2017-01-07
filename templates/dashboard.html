@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZeeSlip|Dashboard</title>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link type="text/css" href="{{ url_for('static', filename='css/dash.css') }}" rel="stylesheet"/>
+    <link type="text/css" href="{{ url_for('static', filename='css/plugin/hover.css') }}" rel="stylesheet"/>
+    <link type="text/css" href="{{ url_for('static', filename='css/plugin/simple-sidebar.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static', filename='font-awesome-4.4.0/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.css"/>
+    <!-- JAVASCRIPT -->
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../static/bootstrap-3.3.5/js/bootstrap.min.js" ></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script>
+
+</head>
+
+<body>
+
+
+<div>
+          <!-- Sidebar -->
+        <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <br>
+                <li class="active sidebar-brand">
+                   <a href="/dashboard/request">REQUEST</a>
+                </li>
+                <li class="sidebar-brand">
+                    <a href="/dashboard/items">ITEMS</a>
+                </li>
+                <li class="sidebar-brand">
+                    <a href="/dashboard/account">ACCOUNTS</a>
+                </li>
+                <li class="sidebar-brand">
+                    <a href="/dashboard/logs">LOGS</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+            <div id="header">
+<nav class="navbar navbar-default nav1" style="color: #000000">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand glyphicon glyphicon-menu-hamburger" href="#menu-toggle" id="menu-toggle" style="color: #ffffff"></a>
+      <ul class="nav navbar-nav">
+        <img src="../static/img/zeeslip-banner.png" class="nav1-img">
+      </ul>
+      <div id="titleB" class="navbar-left nav1-text">
+          | EECE LABORATORY EQUIPMENT RECORD SYSTEM
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="../static/img/business-person-icon.png" height="20px" width="20px"> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/logout">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div><div id="header">
+</div>
+        <!-- content -->
+        {% block request %}
+         {%endblock %}
+         {% block items %}
+         {%endblock %}
+         {% block subject %}
+         {%endblock %}
+         {% block person %}
+         {%endblock %}
+         {% block account %}
+         {%endblock %}
+         {% block logs %}
+         {%endblock %}
+</div>
+</div>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+</body>
+
+</html>

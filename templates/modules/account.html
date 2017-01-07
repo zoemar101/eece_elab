@@ -1,0 +1,106 @@
+{% extends "dashboard.html" %}
+{% block account %}
+<link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+<script type="text/javascript" src="../static/js/features/account.js"></script>
+<div class="">
+    <div class="row">
+        <div class="col-md-2"><span style="padding-left: 20px;" class="request-text"> Account </span></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div id="manAcc" style="float: right; padding-top: 30px; font-size: 20px " ><a href="#"> Manage Account </a></div>
+            <div id="addAcc" style="float: right;  font-size: 20px"><a href="#"> Add Account </a></div>
+        </div>
+        <div class=" col-md-6">
+            <section>
+                  <div id="foraddAcc" class="border-box3">
+                  <div class="modal-header"  style="font-size: 20px; font-weight: bold">ADD Account</div>
+                    <center>
+                      <form id="addAcc" action="/addAccount" style="margin-top: 10px" method="post">
+                        <div class="form-group block">
+                            <label>FirstName : </label>
+                            <input type="text" class=" inputfield-size" id="newFname" name="newFname" required >
+                        </div>
+                        <div class="form-group block">
+                            <label>LastName : </label>
+                            <input type="text" class=" inputfield-size" id="newLname" name="newLname" required>
+                        </div>
+
+                        <div class="form-group block">
+                            <label>Username : </label>
+                            <input type="text" class=" inputfield-size"  id="newusername" name="newusername" required>
+                        </div>
+                        <div class="form-group block">
+                            <label>Password : </label>
+                            <input type="password" class=" inputfield-size"  id="newpassword" name="newpassword" required>
+                        </div>
+                        <div class="form-group block">
+                            <label>Re-Type Password : </label>
+                            <input type="password" class=" inputfield-size"  id="rnewpassword" name="rnewpassword" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-info" style="width: 70% ; margin-left: 29%">ADD ACCOUNT</button>
+                    </form>
+                        {% if error %}
+                            <p class="error" style="color: red"><strong>Error:</strong> {{ error }} {{ ok1 }}
+                        {% endif %}
+                    </center>
+                  </div>
+
+                  <div id="formanAcc" class="border-box3" style="display: none;">
+                  <div class="modal-header" style="font-size: 20px; font-weight: bold">Manage Account</div>
+                     <center>
+                      <form id="addAcc" style="margin-top: 10px">
+                        <div class="form-group block">
+                            <label>FirstName : </label>
+                            <input type="text" class=" inputfield-size" id="manfname" name="manfname" >
+                        </div>
+                        <div class="form-group block">
+                            <label>LastName : </label>
+                            <input type="text" class=" inputfield-size" id="manlname" name="manlname" >
+                        </div>
+
+                        <div class="form-group block">
+                            <label>Username : </label>
+                            <input type="text" class=" inputfield-size"  id="manusername" name="mausername" >
+                        </div>
+                        <div class="form-group block">
+                            <label>New Password : </label>
+                            <input type="password" class=" inputfield-size"  id="manpass" name="manpass" >
+                        </div>
+                        <div class="form-group block">
+                            <label>Re-Type Password : </label>
+                            <input type="password" class=" inputfield-size"  id="rmanpass" name="rmanpass" >
+                        </div>
+
+                        <button type="submit" class="btn btn-info" style="width: 70% ; margin-left: 29%">Save Changes</button>
+                    </form>
+                    </center>
+                  </div>
+
+            </section>
+        </div>
+        <div class="col-md-3 border-box-3">
+            <label> Accounts </label>
+            <table>
+                <thead>
+                <tr>
+                <th>Username</th>
+                <th>Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for r in recs %}
+                    <tr>
+                        <td>{{ r[0] }}</td>
+                        <td>{{ r[1] }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+</div>
+{% endblock %}

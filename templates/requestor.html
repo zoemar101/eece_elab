@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ZeeSlip</title>
+        <!-- CSS -->
+    <link rel="stylesheet" href="../static/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link type="text/css" href="{{ url_for('static', filename='css/dash.css') }}" rel="stylesheet"/>
+    <link type="text/css" href="{{ url_for('static', filename='css/plugin/simple-sidebar.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static', filename='font-awesome-4.4.0/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static', filename='css/requestor.css') }}" rel="stylesheet">
+
+    <!-- JAVASCRIPT -->
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../static/bootstrap-3.3.5/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="../static/js/features/requestor.js"></script>
+
+</head>
+<body>
+    <section id="header">
+        <nav class="navbar navbar-default nav1">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <a href="/"> <img src="../static/img/zeeslip-banner.png" class="nav1-img"> </a>
+              </ul>
+              <div class="navbar-left nav1-text">
+                  | EECE LABORATORY EQUIPMENT RECORD SYSTEM
+              </div>
+            </div>
+          </div>
+        </nav>
+    </section>
+    <form>
+
+        <div class="container req-form-content bg-req-form ">
+            <div class="row">
+                <div class="col-md-3">
+                <div class="form-group ui-widget">
+                    <label for="idnumber">ID Number</label>
+                    <input type="text" class="form-control req-input-size" id="idnumber">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="idnumber">Name</label>
+                    <input type="text" class="form-control req-input-size" id="idnumber">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="idnumber">Subject</label>
+                    <input type="text" class="form-control req-input-size" id="idnumber">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="idnumber">Instuctor</label>
+                    <input type="text" class="form-control req-input-size" id="idnumber">
+                </div>
+            </div>
+            </div>
+            <hr/>
+            <div class="row">
+            <div class="col-md-offset-1 col-md-4" >
+            <div class="req-form-content">
+
+                <div class="form-group">
+                    <label for="intructor">Members</label>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#membersmodal" style="float: right; margin-bottom: 1rem"> Add Members</button>
+                    <table class="table table-hover" id="members">
+                        <thead>
+                        <tr>
+                            <th>Id Number</th>
+                            <th>Name</th>
+                        </tr>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="req-form-content">
+                <label>Items Barrowed</label>
+                 <div class="row">
+                    <div class="col-sm-8">
+                    <input list="litems" id="llitems" name="llitem" class="form-control" placeholder="Search Equipment">
+                    <datalist id="litems">
+                        {% for r in list %}
+                            <option value="{{ r[1] }}">
+                        {% endfor %}
+                    </datalist>
+                    </div>
+                    <div class="col-sm-2"><input type="number" class="form-control" id="qtyEpt" name="qtyEpt" style="width: 120%" placeholder="QTY"></div>
+                    <div class="col-sm-2"><button type="button" class="btn btn-info" style="float: right; margin-bottom: 1rem" onclick="addEpt()"> Add</button></div>
+                </div>
+
+                    <table class="table table-hover" id="reqEpt">
+                        <thead>
+                        <tr>
+                            <th>QTY</th>
+                            <th>Equipment/Tools</th>
+                        </tr>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                </div>
+                    <div class="modal-footer">
+                    <div style="float: left ; color: red">Note: Items will be returned not later than Three (3) hours uppon borrowing. Or rental of Two (2) pesos per minute will be charged. </div>
+                    <button type="submit" class="btn btn-info req-submit"><i class="glyphicon glyphicon-send"> </i> Submit</button>
+                    </div>
+                </div>
+         </div>
+        </div>
+
+    </form>
+    <!-- Members Modal -->
+<div id="membersmodal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Members</h4>
+      </div>
+
+        <form action="#">
+        <div class="modal-body">
+            <label>ID Number</label>
+            <input class="form-control memIdst" id="memId" name="memId" required>
+            <label>Name</label>
+            <input class="form-control memIdst" id="memName" name="memName" required>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" onclick="addMembers()" >Add</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" >DONE</button>
+      </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+    <!-- Add Item Modal -->
+<div id="itemsmodal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Item</h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Add</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+
+</script>
+</body>
+</html>

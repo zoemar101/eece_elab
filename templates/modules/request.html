@@ -1,0 +1,44 @@
+{% extends "dashboard.html" %}
+{% block request %}
+<script type="text/javascript" src="../static/js/request.js" xmlns="http://www.w3.org/1999/html"></script>
+<script type="text/javascript" src="../static/js/features/item.js"></script>
+<script type="text/javascript" src="../static/js/features/request.js"></script>
+<div class="request-page-def">
+    <div class="row">
+        <div class="col-md-2"><span class="request-text"> Request </span></div>
+
+    </div>
+    <br>
+    <div  class="row" style="padding: 25px" >
+    <div  class="table-responsive">
+        <table class="table" id="listRequest" style="cursor: pointer">
+        <thead>
+            <tr>
+                <th>ID Number</th>
+                <th>Subject</th>
+                <th>Date Request</th>
+                <th>Date/Time Release</th>
+                <th>Date/Time Return</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+        <tbody>
+            <!-- Jinja Here: GET requests from DB -->
+            {% for r in rq %}
+            <tr data-toggle="modal" data-target="#{{ r[0] }}" onclick="getReq({{ r[0] }})">
+                <td>{{ r[0] }}</td>
+                <td>{{ r[1] }}</td>
+                <td>{{ r[2] }}</td>
+                <td>{{ r[3] }}</td>
+                <td>--</td>
+                <td>--</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        </div>
+         <div id="inModal"></div>
+    </div>
+</div>
+</div>
+{% endblock %}

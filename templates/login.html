@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZeeSlip|Login</title>
+    <!-- JAVASCRIPT -->
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../static/bootstrap-3.3.5/js/bootstrap.min.js" ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link type="text/css" href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet"/>
+
+
+</head>
+
+<body>
+    <div style="overflow: hidden">
+        <div class="row">
+            <div class="col-md-offset-8 col-md-4">
+                <div class="login-side">
+                    <center><div class="margin-logo"><img src="../static/img/zeeslip-banner.png"></div>
+                        <div class="text-margin1">"<b style="font-size: 24px">L</b>ABORATORY <b style="font-size: 24px">E</b>QUIPMENT <b style="font-size: 24px">R</b>ECORD <b style="font-size: 24px">S</b>YSTEM"</div>
+                        <div>_________________________________________________</div>
+                        <br>
+                        <a href="/borrow"><input type="button" class="btn btn-info btn-lg" value="MAKE A REQUEST"></a>
+                        <br><br>
+                        <div>_______________________ </div>
+                        <br><br>
+
+                        <a href="#"> LOGIN AS ADMINISTRATOR</a>
+                        <div style="padding-bottom: 100%">
+                        <div>
+                            <form method="post" action="/login" >
+                                <div class="form-group" >
+                                <br>
+                                <input type="text" class="form-control login-field-size" name="username"  placeholder="Username" value="{{
+              request.form.username }}"><br>
+                                <input type="password" class="form-control login-field-size" name="password"  placeholder="Password"  value="{{
+              request.form.password }}"><br>
+                                <button type="submit" class="form-control btn btn-info login-field-size">LOG IN</button>
+                                </div>
+                            </form>
+                        {% if error %}
+                            <p class="error" style="color: red"><strong>Error:</strong> {{ error }} {{ ok1 }}
+                        {% endif %}
+                        </div>
+                        </div>
+
+                    </center>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
