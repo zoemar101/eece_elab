@@ -89,7 +89,7 @@ class zeebuks(Flask):
         borrowedlist = cur.fetchall()
         res = []
         for r in borrowedlist:
-            res.append({'id': r[1], 'iname': r[2], 'subject':r[3], 'itemcode':r[6], 'itemname':r[7], 'itemquan': r[9]})
+            res.append({'id': r[1], 'iname': r[2], 'subject':r[3], 'itemcode':r[6], 'itemname':r[7], 'itemquan': r[9], 'issDate': r[11]})
         return jsonify({'res': res, 'count': len(res)})
 
     @app.route('/dashboard/items')

@@ -9,12 +9,14 @@ function getReq(id){
             data: {getid: id},
     		success: function(recs) {
                 $("#reqrID").text("")
+                $("#reqItems tr").remove();
                 $("#reqrID").text(recs.res[0].id)
 
                 for (i = 0; i < recs.count; i++){
                         itmQuan = recs.res[i].itemquan
                         itmCode = recs.res[i].itemcode
                         itmName = recs.res[i].itemname
+                        issdate = recs.res[i].issDate
 
                         var x = document.getElementById("reqItems").rows.length;
                         var table = document.getElementById("reqItems");
@@ -27,7 +29,13 @@ function getReq(id){
                             cell1.innerHTML = itmQuan;
                             cell2.innerHTML = itmCode;
                             cell3.innerHTML = itmName;
-                            cell4.innerHTML = '<button class="btn btn-default" > Release </button>'
+
+                            if( issdate == null ){
+                                cell4.innerHTML = '<button class="btn btn-default" > Release </button>'
+                            }
+                            else{
+                                cell4.innerHTML = '<button class="btn btn-default" > Return </button>'
+                            }
 
                 }
 
