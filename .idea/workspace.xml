@@ -16,7 +16,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/eece_elab$model.coverage" NAME="model Coverage Results" MODIFIED="1480780266448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/eece_elab$eece_elab.coverage" NAME="eece_elab Coverage Results" MODIFIED="1481714358479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/eece_elab$app.coverage" NAME="app Coverage Results" MODIFIED="1483806859357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/eece_elab$app.coverage" NAME="app Coverage Results" MODIFIED="1483851650704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,42 +36,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1877" max-vertical-offset="4641">
-              <caret line="123" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.8356941" vertical-offset="980" max-vertical-offset="4641">
+              <caret line="75" column="879" selection-start-line="75" selection-start-column="879" selection-end-line="75" selection-end-column="879" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
-                <marker date="1483803173695" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
-                <marker date="1483803173695" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
-                <marker date="1483803173695" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
-                <marker date="1483803173695" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
-                <marker date="1483803173695" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
-                <marker date="1483803173695" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
-                <marker date="1483803173695" expanded="true" signature="2231:3093" placeholder="SELECT Reque..itemId..." />
-                <marker date="1483803173695" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
-                <marker date="1483803173695" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
-                <marker date="1483803173695" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
-                <marker date="1483803173695" expanded="true" signature="3432:3641" placeholder="SELECT Borro..Item..." />
-                <marker date="1483803173695" expanded="true" signature="4016:4086" placeholder="SELECT itemI..Item..." />
-                <marker date="1483803173695" expanded="true" signature="4383:4421" placeholder="SELECT usern..Account..." />
-                <marker date="1483803173695" expanded="true" signature="4713:5228" placeholder="SELECT Reque..itemId..." />
-                <marker date="1483803173695" expanded="true" signature="4896:5126" placeholder="SELECT Borro..BorrowedItem..." />
-                <marker date="1483803173695" expanded="true" signature="5707:5789" placeholder="INSERT INTO ..." />
-                <marker date="1483803173695" expanded="true" signature="6136:6169" placeholder="DELETE FROM ..." />
-                <marker date="1483803173695" expanded="true" signature="6846:6942" placeholder="UPDATE Item ..." />
-                <marker date="1483803173695" expanded="true" signature="7367:7439" placeholder="INSERT INTO ..." />
-                <marker date="1483803173695" expanded="true" signature="7579:7711" placeholder="INSERT INTO ..." />
-                <marker date="1483803173695" expanded="true" signature="7648:7709" placeholder="SELECT reque..Request..." />
-                <marker date="1483803173695" expanded="true" signature="8093:8327" placeholder="DELETE FROM ..." />
-                <marker date="1483803173695" expanded="true" signature="8144:8326" placeholder="SELECT reque..requestId..." />
-                <marker date="1483803173695" expanded="true" signature="8167:8196" placeholder="SELECT reque..Request..." />
-                <marker date="1483803173695" expanded="true" signature="8209:8290" placeholder="SELECT reque..BorrowedItem..." />
-                <marker date="1483803173695" expanded="true" signature="8663:8763" placeholder="UPDATE Borro..." />
-                <marker date="1483803173695" expanded="true" signature="9030:9131" placeholder="UPDATE Borro..." />
-                <marker date="1483803173695" expanded="true" signature="9771:9846" placeholder="INSERT INTO ..." />
-                <marker date="1483803173695" expanded="true" signature="10663:10738" placeholder="INSERT INTO ..." />
+                <marker date="1483851645427" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
+                <marker date="1483851645427" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
+                <marker date="1483851645427" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
+                <marker date="1483851645427" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
+                <marker date="1483851645427" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
+                <marker date="1483851645427" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
+                <marker date="1483851645427" expanded="true" signature="2231:3089" placeholder="SELECT Reque..itemId..." />
+                <marker date="1483851645427" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
+                <marker date="1483851645427" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
+                <marker date="1483851645427" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
+                <marker date="1483851645427" expanded="true" signature="3428:3637" placeholder="SELECT Borro..Item..." />
+                <marker date="1483851645427" expanded="true" signature="4012:4082" placeholder="SELECT itemI..Item..." />
+                <marker date="1483851645427" expanded="true" signature="4379:4417" placeholder="SELECT usern..Account..." />
+                <marker date="1483851645427" expanded="true" signature="4709:5224" placeholder="SELECT Reque..itemId..." />
+                <marker date="1483851645427" expanded="true" signature="4892:5122" placeholder="SELECT Borro..BorrowedItem..." />
+                <marker date="1483851645427" expanded="true" signature="5703:5785" placeholder="INSERT INTO ..." />
+                <marker date="1483851645427" expanded="true" signature="6132:6165" placeholder="DELETE FROM ..." />
+                <marker date="1483851645427" expanded="true" signature="6842:6938" placeholder="UPDATE Item ..." />
+                <marker date="1483851645427" expanded="true" signature="7363:7435" placeholder="INSERT INTO ..." />
+                <marker date="1483851645427" expanded="true" signature="7575:7707" placeholder="INSERT INTO ..." />
+                <marker date="1483851645427" expanded="true" signature="7644:7705" placeholder="SELECT reque..Request..." />
+                <marker date="1483851645427" expanded="true" signature="8089:8323" placeholder="DELETE FROM ..." />
+                <marker date="1483851645427" expanded="true" signature="8140:8322" placeholder="SELECT reque..requestId..." />
+                <marker date="1483851645427" expanded="true" signature="8163:8192" placeholder="SELECT reque..Request..." />
+                <marker date="1483851645427" expanded="true" signature="8205:8286" placeholder="SELECT reque..BorrowedItem..." />
+                <marker date="1483851645427" expanded="true" signature="8659:8759" placeholder="UPDATE Borro..." />
+                <marker date="1483851645427" expanded="true" signature="9026:9127" placeholder="UPDATE Borro..." />
+                <marker date="1483851645427" expanded="true" signature="9767:9842" placeholder="INSERT INTO ..." />
+                <marker date="1483851645427" expanded="true" signature="10659:10734" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -80,7 +80,7 @@
       <file leaf-file-name="logs.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/modules/logs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.230769" vertical-offset="237" max-vertical-offset="680">
+            <state vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="680">
               <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
               <folding />
             </state>
@@ -90,7 +90,7 @@
       <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="680" max-vertical-offset="2074">
+            <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="2074">
               <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
               <folding />
             </state>
@@ -100,7 +100,7 @@
       <file leaf-file-name="request.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/features/request.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="289">
               <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
               <folding>
                 <element signature="n#!!doc;n#getReq#0" expanded="false" />
@@ -112,20 +112,17 @@
       <file leaf-file-name="request.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/modules/request.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="306" max-vertical-offset="901">
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="901">
               <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-              <folding>
-                <element signature="e#1351#1369#0#HTML" expanded="true" />
-                <element signature="e#1430#1450#0#HTML" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="items.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="items.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/modules/items.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6788991" vertical-offset="1325" max-vertical-offset="2006">
+            <state vertical-scroll-proportion="-8.538462" vertical-offset="1325" max-vertical-offset="2006">
               <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
               <folding />
             </state>
@@ -135,7 +132,7 @@
       <file leaf-file-name="account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/modules/account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="17.076923" vertical-offset="529" max-vertical-offset="1887">
+            <state vertical-scroll-proportion="0.0" vertical-offset="529" max-vertical-offset="1887">
               <caret line="5" column="21" selection-start-line="3" selection-start-column="79" selection-end-line="5" selection-end-column="21" />
               <folding />
             </state>
@@ -145,7 +142,7 @@
       <file leaf-file-name="account.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/features/account.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+            <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="459">
               <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
@@ -187,11 +184,11 @@
         <option value="$PROJECT_DIR$/static/js/features/item.js" />
         <option value="$PROJECT_DIR$/static/js/features/request.js" />
         <option value="$PROJECT_DIR$/templates/modules/account.html" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/static/js/features/account.js" />
         <option value="$PROJECT_DIR$/templates/modules/logs.html" />
         <option value="$PROJECT_DIR$/templates/modules/request.html" />
         <option value="$PROJECT_DIR$/templates/modules/items.html" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -719,7 +716,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -729,7 +726,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2322239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23600605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34795764" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -814,35 +811,35 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <marker date="1483803173695" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
-            <marker date="1483803173695" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
-            <marker date="1483803173695" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
-            <marker date="1483803173695" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
-            <marker date="1483803173695" expanded="true" signature="2231:3093" placeholder="SELECT Reque..itemId..." />
-            <marker date="1483803173695" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="3432:3641" placeholder="SELECT Borro..Item..." />
-            <marker date="1483803173695" expanded="true" signature="4016:4086" placeholder="SELECT itemI..Item..." />
-            <marker date="1483803173695" expanded="true" signature="4383:4421" placeholder="SELECT usern..Account..." />
-            <marker date="1483803173695" expanded="true" signature="4713:5228" placeholder="SELECT Reque..itemId..." />
-            <marker date="1483803173695" expanded="true" signature="4896:5126" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="5707:5789" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="6136:6169" placeholder="DELETE FROM ..." />
-            <marker date="1483803173695" expanded="true" signature="6846:6942" placeholder="UPDATE Item ..." />
-            <marker date="1483803173695" expanded="true" signature="7367:7439" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="7579:7711" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="7648:7709" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="8093:8327" placeholder="DELETE FROM ..." />
-            <marker date="1483803173695" expanded="true" signature="8144:8326" placeholder="SELECT reque..requestId..." />
-            <marker date="1483803173695" expanded="true" signature="8167:8196" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="8209:8290" placeholder="SELECT reque..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="8663:8763" placeholder="UPDATE Borro..." />
-            <marker date="1483803173695" expanded="true" signature="9030:9131" placeholder="UPDATE Borro..." />
-            <marker date="1483803173695" expanded="true" signature="9771:9846" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="10663:10738" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
+            <marker date="1483851645427" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
+            <marker date="1483851645427" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
+            <marker date="1483851645427" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
+            <marker date="1483851645427" expanded="true" signature="2231:3089" placeholder="SELECT Reque..itemId..." />
+            <marker date="1483851645427" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="3428:3637" placeholder="SELECT Borro..Item..." />
+            <marker date="1483851645427" expanded="true" signature="4012:4082" placeholder="SELECT itemI..Item..." />
+            <marker date="1483851645427" expanded="true" signature="4379:4417" placeholder="SELECT usern..Account..." />
+            <marker date="1483851645427" expanded="true" signature="4709:5224" placeholder="SELECT Reque..itemId..." />
+            <marker date="1483851645427" expanded="true" signature="4892:5122" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="5703:5785" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="6132:6165" placeholder="DELETE FROM ..." />
+            <marker date="1483851645427" expanded="true" signature="6842:6938" placeholder="UPDATE Item ..." />
+            <marker date="1483851645427" expanded="true" signature="7363:7435" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="7575:7707" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="7644:7705" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="8089:8323" placeholder="DELETE FROM ..." />
+            <marker date="1483851645427" expanded="true" signature="8140:8322" placeholder="SELECT reque..requestId..." />
+            <marker date="1483851645427" expanded="true" signature="8163:8192" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="8205:8286" placeholder="SELECT reque..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="8659:8759" placeholder="UPDATE Borro..." />
+            <marker date="1483851645427" expanded="true" signature="9026:9127" placeholder="UPDATE Borro..." />
+            <marker date="1483851645427" expanded="true" signature="9767:9842" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="10659:10734" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -867,35 +864,35 @@
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <marker date="1483803173695" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
-            <marker date="1483803173695" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
-            <marker date="1483803173695" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
-            <marker date="1483803173695" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
-            <marker date="1483803173695" expanded="true" signature="2231:3093" placeholder="SELECT Reque..itemId..." />
-            <marker date="1483803173695" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="3432:3641" placeholder="SELECT Borro..Item..." />
-            <marker date="1483803173695" expanded="true" signature="4016:4086" placeholder="SELECT itemI..Item..." />
-            <marker date="1483803173695" expanded="true" signature="4383:4421" placeholder="SELECT usern..Account..." />
-            <marker date="1483803173695" expanded="true" signature="4713:5228" placeholder="SELECT Reque..itemId..." />
-            <marker date="1483803173695" expanded="true" signature="4896:5126" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="5707:5789" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="6136:6169" placeholder="DELETE FROM ..." />
-            <marker date="1483803173695" expanded="true" signature="6846:6942" placeholder="UPDATE Item ..." />
-            <marker date="1483803173695" expanded="true" signature="7367:7439" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="7579:7711" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="7648:7709" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="8093:8327" placeholder="DELETE FROM ..." />
-            <marker date="1483803173695" expanded="true" signature="8144:8326" placeholder="SELECT reque..requestId..." />
-            <marker date="1483803173695" expanded="true" signature="8167:8196" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="8209:8290" placeholder="SELECT reque..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="8663:8763" placeholder="UPDATE Borro..." />
-            <marker date="1483803173695" expanded="true" signature="9030:9131" placeholder="UPDATE Borro..." />
-            <marker date="1483803173695" expanded="true" signature="9771:9846" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="10663:10738" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
+            <marker date="1483851645427" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
+            <marker date="1483851645427" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
+            <marker date="1483851645427" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
+            <marker date="1483851645427" expanded="true" signature="2231:3089" placeholder="SELECT Reque..itemId..." />
+            <marker date="1483851645427" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="3428:3637" placeholder="SELECT Borro..Item..." />
+            <marker date="1483851645427" expanded="true" signature="4012:4082" placeholder="SELECT itemI..Item..." />
+            <marker date="1483851645427" expanded="true" signature="4379:4417" placeholder="SELECT usern..Account..." />
+            <marker date="1483851645427" expanded="true" signature="4709:5224" placeholder="SELECT Reque..itemId..." />
+            <marker date="1483851645427" expanded="true" signature="4892:5122" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="5703:5785" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="6132:6165" placeholder="DELETE FROM ..." />
+            <marker date="1483851645427" expanded="true" signature="6842:6938" placeholder="UPDATE Item ..." />
+            <marker date="1483851645427" expanded="true" signature="7363:7435" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="7575:7707" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="7644:7705" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="8089:8323" placeholder="DELETE FROM ..." />
+            <marker date="1483851645427" expanded="true" signature="8140:8322" placeholder="SELECT reque..requestId..." />
+            <marker date="1483851645427" expanded="true" signature="8163:8192" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="8205:8286" placeholder="SELECT reque..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="8659:8759" placeholder="UPDATE Borro..." />
+            <marker date="1483851645427" expanded="true" signature="9026:9127" placeholder="UPDATE Borro..." />
+            <marker date="1483851645427" expanded="true" signature="9767:9842" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="10659:10734" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -927,35 +924,35 @@
           <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <marker date="1483803173695" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
-            <marker date="1483803173695" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
-            <marker date="1483803173695" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
-            <marker date="1483803173695" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
-            <marker date="1483803173695" expanded="true" signature="2231:3093" placeholder="SELECT Reque..itemId..." />
-            <marker date="1483803173695" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="3432:3641" placeholder="SELECT Borro..Item..." />
-            <marker date="1483803173695" expanded="true" signature="4016:4086" placeholder="SELECT itemI..Item..." />
-            <marker date="1483803173695" expanded="true" signature="4383:4421" placeholder="SELECT usern..Account..." />
-            <marker date="1483803173695" expanded="true" signature="4713:5228" placeholder="SELECT Reque..itemId..." />
-            <marker date="1483803173695" expanded="true" signature="4896:5126" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="5707:5789" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="6136:6169" placeholder="DELETE FROM ..." />
-            <marker date="1483803173695" expanded="true" signature="6846:6942" placeholder="UPDATE Item ..." />
-            <marker date="1483803173695" expanded="true" signature="7367:7439" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="7579:7711" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="7648:7709" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="8093:8327" placeholder="DELETE FROM ..." />
-            <marker date="1483803173695" expanded="true" signature="8144:8326" placeholder="SELECT reque..requestId..." />
-            <marker date="1483803173695" expanded="true" signature="8167:8196" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="8209:8290" placeholder="SELECT reque..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="8663:8763" placeholder="UPDATE Borro..." />
-            <marker date="1483803173695" expanded="true" signature="9030:9131" placeholder="UPDATE Borro..." />
-            <marker date="1483803173695" expanded="true" signature="9771:9846" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="10663:10738" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
+            <marker date="1483851645427" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
+            <marker date="1483851645427" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
+            <marker date="1483851645427" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
+            <marker date="1483851645427" expanded="true" signature="2231:3089" placeholder="SELECT Reque..itemId..." />
+            <marker date="1483851645427" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="3428:3637" placeholder="SELECT Borro..Item..." />
+            <marker date="1483851645427" expanded="true" signature="4012:4082" placeholder="SELECT itemI..Item..." />
+            <marker date="1483851645427" expanded="true" signature="4379:4417" placeholder="SELECT usern..Account..." />
+            <marker date="1483851645427" expanded="true" signature="4709:5224" placeholder="SELECT Reque..itemId..." />
+            <marker date="1483851645427" expanded="true" signature="4892:5122" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="5703:5785" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="6132:6165" placeholder="DELETE FROM ..." />
+            <marker date="1483851645427" expanded="true" signature="6842:6938" placeholder="UPDATE Item ..." />
+            <marker date="1483851645427" expanded="true" signature="7363:7435" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="7575:7707" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="7644:7705" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="8089:8323" placeholder="DELETE FROM ..." />
+            <marker date="1483851645427" expanded="true" signature="8140:8322" placeholder="SELECT reque..requestId..." />
+            <marker date="1483851645427" expanded="true" signature="8163:8192" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="8205:8286" placeholder="SELECT reque..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="8659:8759" placeholder="UPDATE Borro..." />
+            <marker date="1483851645427" expanded="true" signature="9026:9127" placeholder="UPDATE Borro..." />
+            <marker date="1483851645427" expanded="true" signature="9767:9842" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="10659:10734" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -973,35 +970,35 @@
           <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <marker date="1483803173695" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
-            <marker date="1483803173695" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
-            <marker date="1483803173695" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
-            <marker date="1483803173695" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
-            <marker date="1483803173695" expanded="true" signature="2231:3093" placeholder="SELECT Reque..itemId..." />
-            <marker date="1483803173695" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="3432:3641" placeholder="SELECT Borro..Item..." />
-            <marker date="1483803173695" expanded="true" signature="4016:4086" placeholder="SELECT itemI..Item..." />
-            <marker date="1483803173695" expanded="true" signature="4383:4421" placeholder="SELECT usern..Account..." />
-            <marker date="1483803173695" expanded="true" signature="4713:5228" placeholder="SELECT Reque..itemId..." />
-            <marker date="1483803173695" expanded="true" signature="4896:5126" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="5707:5789" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="6136:6169" placeholder="DELETE FROM ..." />
-            <marker date="1483803173695" expanded="true" signature="6846:6942" placeholder="UPDATE Item ..." />
-            <marker date="1483803173695" expanded="true" signature="7367:7439" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="7579:7711" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="7648:7709" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="8093:8327" placeholder="DELETE FROM ..." />
-            <marker date="1483803173695" expanded="true" signature="8144:8326" placeholder="SELECT reque..requestId..." />
-            <marker date="1483803173695" expanded="true" signature="8167:8196" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="8209:8290" placeholder="SELECT reque..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="8663:8763" placeholder="UPDATE Borro..." />
-            <marker date="1483803173695" expanded="true" signature="9030:9131" placeholder="UPDATE Borro..." />
-            <marker date="1483803173695" expanded="true" signature="9771:9846" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="10663:10738" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
+            <marker date="1483851645427" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
+            <marker date="1483851645427" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
+            <marker date="1483851645427" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
+            <marker date="1483851645427" expanded="true" signature="2231:3089" placeholder="SELECT Reque..itemId..." />
+            <marker date="1483851645427" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="3428:3637" placeholder="SELECT Borro..Item..." />
+            <marker date="1483851645427" expanded="true" signature="4012:4082" placeholder="SELECT itemI..Item..." />
+            <marker date="1483851645427" expanded="true" signature="4379:4417" placeholder="SELECT usern..Account..." />
+            <marker date="1483851645427" expanded="true" signature="4709:5224" placeholder="SELECT Reque..itemId..." />
+            <marker date="1483851645427" expanded="true" signature="4892:5122" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="5703:5785" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="6132:6165" placeholder="DELETE FROM ..." />
+            <marker date="1483851645427" expanded="true" signature="6842:6938" placeholder="UPDATE Item ..." />
+            <marker date="1483851645427" expanded="true" signature="7363:7435" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="7575:7707" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="7644:7705" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="8089:8323" placeholder="DELETE FROM ..." />
+            <marker date="1483851645427" expanded="true" signature="8140:8322" placeholder="SELECT reque..requestId..." />
+            <marker date="1483851645427" expanded="true" signature="8163:8192" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="8205:8286" placeholder="SELECT reque..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="8659:8759" placeholder="UPDATE Borro..." />
+            <marker date="1483851645427" expanded="true" signature="9026:9127" placeholder="UPDATE Borro..." />
+            <marker date="1483851645427" expanded="true" signature="9767:9842" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="10659:10734" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -1261,48 +1258,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1877" max-vertical-offset="4641">
-          <caret line="123" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#77#0" expanded="true" />
-            <marker date="1483803173695" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
-            <marker date="1483803173695" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
-            <marker date="1483803173695" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
-            <marker date="1483803173695" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
-            <marker date="1483803173695" expanded="true" signature="2231:3093" placeholder="SELECT Reque..itemId..." />
-            <marker date="1483803173695" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="3432:3641" placeholder="SELECT Borro..Item..." />
-            <marker date="1483803173695" expanded="true" signature="4016:4086" placeholder="SELECT itemI..Item..." />
-            <marker date="1483803173695" expanded="true" signature="4383:4421" placeholder="SELECT usern..Account..." />
-            <marker date="1483803173695" expanded="true" signature="4713:5228" placeholder="SELECT Reque..itemId..." />
-            <marker date="1483803173695" expanded="true" signature="4896:5126" placeholder="SELECT Borro..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="5707:5789" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="6136:6169" placeholder="DELETE FROM ..." />
-            <marker date="1483803173695" expanded="true" signature="6846:6942" placeholder="UPDATE Item ..." />
-            <marker date="1483803173695" expanded="true" signature="7367:7439" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="7579:7711" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="7648:7709" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="8093:8327" placeholder="DELETE FROM ..." />
-            <marker date="1483803173695" expanded="true" signature="8144:8326" placeholder="SELECT reque..requestId..." />
-            <marker date="1483803173695" expanded="true" signature="8167:8196" placeholder="SELECT reque..Request..." />
-            <marker date="1483803173695" expanded="true" signature="8209:8290" placeholder="SELECT reque..BorrowedItem..." />
-            <marker date="1483803173695" expanded="true" signature="8663:8763" placeholder="UPDATE Borro..." />
-            <marker date="1483803173695" expanded="true" signature="9030:9131" placeholder="UPDATE Borro..." />
-            <marker date="1483803173695" expanded="true" signature="9771:9846" placeholder="INSERT INTO ..." />
-            <marker date="1483803173695" expanded="true" signature="10663:10738" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/modules/logs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.230769" vertical-offset="237" max-vertical-offset="680">
+        <state vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="680">
           <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding />
         </state>
@@ -1310,7 +1268,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/modules/account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="17.076923" vertical-offset="529" max-vertical-offset="1887">
+        <state vertical-scroll-proportion="0.0" vertical-offset="529" max-vertical-offset="1887">
           <caret line="5" column="21" selection-start-line="3" selection-start-column="79" selection-end-line="5" selection-end-column="21" />
           <folding />
         </state>
@@ -1318,20 +1276,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/modules/request.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="306" max-vertical-offset="901">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="901">
           <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding>
-            <element signature="e#1351#1369#0#HTML" expanded="true" />
-            <element signature="e#1430#1450#0#HTML" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/modules/items.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6788991" vertical-offset="1325" max-vertical-offset="2006">
+        <state vertical-scroll-proportion="-8.538462" vertical-offset="1325" max-vertical-offset="2006">
           <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8356941" vertical-offset="980" max-vertical-offset="4641">
+          <caret line="75" column="879" selection-start-line="75" selection-start-column="879" selection-end-line="75" selection-end-column="879" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+            <marker date="1483851645427" expanded="true" signature="350:370" placeholder="select * fro..Person..." />
+            <marker date="1483851645427" expanded="true" signature="929:1002" placeholder="SELECT usern..Account..." />
+            <marker date="1483851645427" expanded="true" signature="1539:1851" placeholder="SELECT itemI..Item..." />
+            <marker date="1483851645427" expanded="true" signature="1609:1806" placeholder="SELECT SUM(B..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="1723:1805" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="2231:2238" placeholder="SELECT borro..Request..." />
+            <marker date="1483851645427" expanded="true" signature="2231:3089" placeholder="SELECT Reque..itemId..." />
+            <marker date="1483851645427" expanded="true" signature="2429:2995" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="2548:2812" placeholder="SELECT SUM(B..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="2662:2811" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="3428:3637" placeholder="SELECT Borro..Item..." />
+            <marker date="1483851645427" expanded="true" signature="4012:4082" placeholder="SELECT itemI..Item..." />
+            <marker date="1483851645427" expanded="true" signature="4379:4417" placeholder="SELECT usern..Account..." />
+            <marker date="1483851645427" expanded="true" signature="4709:5224" placeholder="SELECT Reque..itemId..." />
+            <marker date="1483851645427" expanded="true" signature="4892:5122" placeholder="SELECT Borro..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="5703:5785" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="6132:6165" placeholder="DELETE FROM ..." />
+            <marker date="1483851645427" expanded="true" signature="6842:6938" placeholder="UPDATE Item ..." />
+            <marker date="1483851645427" expanded="true" signature="7363:7435" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="7575:7707" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="7644:7705" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="8089:8323" placeholder="DELETE FROM ..." />
+            <marker date="1483851645427" expanded="true" signature="8140:8322" placeholder="SELECT reque..requestId..." />
+            <marker date="1483851645427" expanded="true" signature="8163:8192" placeholder="SELECT reque..Request..." />
+            <marker date="1483851645427" expanded="true" signature="8205:8286" placeholder="SELECT reque..BorrowedItem..." />
+            <marker date="1483851645427" expanded="true" signature="8659:8759" placeholder="UPDATE Borro..." />
+            <marker date="1483851645427" expanded="true" signature="9026:9127" placeholder="UPDATE Borro..." />
+            <marker date="1483851645427" expanded="true" signature="9767:9842" placeholder="INSERT INTO ..." />
+            <marker date="1483851645427" expanded="true" signature="10659:10734" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
