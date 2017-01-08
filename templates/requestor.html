@@ -42,26 +42,26 @@
             <div class="row">
                 <div class="col-md-3">
                 <div class="form-group ui-widget">
-                    <label for="idnumber">ID Number</label>
-                    <input type="text" class="form-control req-input-size" id="idnumber">
+                    <label for="rqidnumber">ID Number</label>
+                    <input type="text" class="form-control req-input-size" id="rqidnumber" name="rqidnumber">
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label for="idnumber">Name</label>
-                    <input type="text" class="form-control req-input-size" id="idnumber">
+                    <label for="rqname">Name</label>
+                    <input type="text" class="form-control req-input-size" id="rqname" name = "rqname">
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label for="idnumber">Subject</label>
-                    <input type="text" class="form-control req-input-size" id="idnumber">
+                    <label for="rqsubject">Subject</label>
+                    <input type="text" class="form-control req-input-size" id="rqsubject" name="rqsubject">
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label for="idnumber">Instuctor</label>
-                    <input type="text" class="form-control req-input-size" id="idnumber">
+                    <label for="rqins">Instuctor</label>
+                    <input type="text" class="form-control req-input-size" id="rqins" name="rqins">
                 </div>
             </div>
             </div>
@@ -93,7 +93,7 @@
                     <input list="litems" id="llitems" name="llitem" class="form-control" placeholder="Search Equipment">
                     <datalist id="litems">
                         {% for r in list %}
-                            <option value="{{ r[1] }}">
+                            <option value="{{ r[2] }}">
                         {% endfor %}
                     </datalist>
                     </div>

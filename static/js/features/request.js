@@ -12,11 +12,18 @@ function getReq(id){
                 $("#reqItems tr").remove();
                 $("#reqrID").text(recs.res[0].id)
 
+                var bt = '<button class="btn btn-danger" onclick="deleteReq('+ recs.res[0].reqID +')">DELETE REQUEST</button>'
+                $("#deleteREQ").empty()
+                document.getElementById('deleteREQ').innerHTML = bt;
+
+
                 for (i = 0; i < recs.count; i++){
                         itmQuan = recs.res[i].itemquan
                         itmCode = recs.res[i].itemcode
                         itmName = recs.res[i].itemname
                         issdate = recs.res[i].issDate
+                        itmID = recs.res[i].itemID
+
 
                         var x = document.getElementById("reqItems").rows.length;
                         var table = document.getElementById("reqItems");
@@ -31,10 +38,10 @@ function getReq(id){
                             cell3.innerHTML = itmName;
 
                             if( issdate == null ){
-                                cell4.innerHTML = '<button class="btn btn-default" > Release </button>'
+                                cell4.innerHTML = '<button class="btn btn-default" onclick="issueItem(itmID)"> Release </button>'
                             }
                             else{
-                                cell4.innerHTML = '<button class="btn btn-default" > Return </button>'
+                                cell4.innerHTML = '<button class="btn btn-default" onclick="returnItem(itmID)"> Return </button>'
                             }
 
                 }
@@ -42,4 +49,44 @@ function getReq(id){
                 console.log(recs.res[0])
             }
 		});
+}
+
+function deleteReq(id){
+    $.ajax({
+        url: '/deleteRequest',
+        type: "GET",
+        dataType: "JSON",
+        data: {delreqid: id},
+        success: function (recs) {
+            console.log("ok")
+            location.reload()
+        }
+    })
+}
+
+function issueItem(id){
+    console.log(id)
+    $.ajax({
+        url: '/issueItem',
+        type: "GET",
+        dataType: "JSON",
+        data: {issid: id},
+        success: function (recs) {
+            this.button.prop('disabled', true);
+            console.log("ok")
+        }
+    })
+}
+
+function returnItem(id){
+    console.log(id)
+    $.ajax({
+        url: '/returnItem',
+        type: "GET",
+        dataType: "JSON",
+        data: {retid: id},
+        success: function (recs) {
+            console.log("ok")
+        }
+    })
 }

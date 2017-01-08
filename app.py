@@ -60,7 +60,7 @@ class zeebuks(Flask):
         con.row_factory = sqlite3.Row
 
         cur = con.cursor()
-        cur.execute("SELECT itemId,itemCode,itemName,itemDescription,(Item.itemQuantity - (SELECT SUM(BorrowedItem.itemQuantity) FROM BorrowedItem WHERE Item.itemId = BorrowedItem.itemId AND requestId IN (SELECT requestId FROM Request WHERE releaseDate IS NOT NULL AND returnDate IS NULL))) as available FROM Item WHERE available > 0")
+        cur.execute("SELECT itemId,itemCode,itemName,itemDescription,(Item.itemQuantity - (SELECT SUM(BorrowedItem.itemQuantity) FROM BorrowedItem WHERE Item.itemId = BorrowedItem.itemId AND requestId IN (SELECT requestId FROM Request WHERE returnDate IS NULL))) as available FROM Item WHERE available > 0")
 
         rows = cur.fetchall();
 
@@ -89,7 +89,7 @@ class zeebuks(Flask):
         borrowedlist = cur.fetchall()
         res = []
         for r in borrowedlist:
-            res.append({'id': r[1], 'iname': r[2], 'subject':r[3], 'itemcode':r[6], 'itemname':r[7], 'itemquan': r[9], 'issDate': r[11]})
+            res.append({'reqID': r[0], 'id': r[1], 'iname': r[2], 'subject':r[3], 'itemID': r[5], 'itemcode':r[6], 'itemname':r[7], 'itemquan': r[9], 'issDate': r[11]})
         return jsonify({'res': res, 'count': len(res)})
 
     @app.route('/dashboard/items')
@@ -176,6 +176,9 @@ class zeebuks(Flask):
 
     @app.route('/submitRequest', methods=['POST'])
     def submitRequest():
+            idNumber =  request.form['rqisnumber']
+            name = request.form['rqname']
+            subject = request.form['rqsubject']
             borroweditems = [] #list of tuples sa borrowed items i.e. [(121,10), ..., ]
             if request.method == 'POST':
                 with sqlite3.connect("ZeeSlipv2.sqlite") as con:
@@ -187,36 +190,39 @@ class zeebuks(Flask):
                     con.close()
             return redirect('dashboard/barrow')
 
-    @app.route('/deleteRequest', methods=['POST'])
+    @app.route('/deleteRequest', methods=['GET'])
     def deleteRequest():
-        if request.method == 'POST':
-                with sqlite3.connect("ZeeSlipv2.sqlite") as con:
-                    cur = con.cursor()
-                    cur.execute("DELETE FROM Request WHERE requestId = ? AND EXISTS(SELECT requestId FROM (SELECT requestId FROM Request) LEFT JOIN (SELECT requestId as issuedRequestId FROM BorrowedItem WHERE issueDate IS NOT NULL) WHERE requestId != issuedRequestId)",requestId)
-                    con.commit()
-                    con.close()
-                return redirect('dashboard/request')
+        requestId =  request.args.get('delreqid')
+        with sqlite3.connect("ZeeSlipv2.sqlite") as con:
+            cur = con.cursor()
+            cur.execute("DELETE FROM Request WHERE requestId = ? AND EXISTS(SELECT requestId FROM (SELECT requestId FROM Request) LEFT JOIN (SELECT requestId as issuedRequestId FROM BorrowedItem WHERE issueDate IS NOT NULL) WHERE requestId != issuedRequestId)",[requestId])
+            con.commit()
+
+        return "ok"
 
     @app.route('/issueItem', methods=['GET'])
     def issueItem():
+        borrowedItemId = request.args.get('issid')
         con = sqlite3.connect("ZeeSlipv2.sqlite")
         con.row_factory = sqlite3.Row
 
         cur = con.cursor()
-        cur.execute("UPDATE BorrowedItem SET issueDate = datetime(CURRENT_TIMESTAMP,'localtime') WHERE borrowedItemId = ?", borrowedItemId)
+        cur.execute("UPDATE BorrowedItem SET issueDate = datetime(CURRENT_TIMESTAMP,'localtime') WHERE borrowedItemId = ?", [borrowedItemId])
         con.commit()
         con.close()
+        return "ok"
 
     @app.route('/returnItem', methods=['GET'])
     def returnItem():
+        borrowedItemId = request.args.get('retid')
         con = sqlite3.connect("ZeeSlipv2.sqlite")
         con.row_factory = sqlite3.Row
 
         cur = con.cursor()
-        cur.execute("UPDATE BorrowedItem SET returnDate = datetime(CURRENT_TIMESTAMP,'localtime') WHERE borrowedItemId = ?",borrowedItemId)
+        cur.execute("UPDATE BorrowedItem SET returnDate = datetime(CURRENT_TIMESTAMP,'localtime') WHERE borrowedItemId = ?",[borrowedItemId])
         con.commit()
         con.close()
-
+        return "ok"
 
     @app.route('/addAccount', methods=['POST'])
     def addAcc():
