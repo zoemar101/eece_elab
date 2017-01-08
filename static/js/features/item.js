@@ -2,7 +2,7 @@
 $(document).ready(function ()  {
     var table = $('#itemList').DataTable();
     var requestTB = $('#listRequest').DataTable();
-
+    var logsTB = $('#logsTable').DataTable();
 })
 
 function viewDetails(data) {

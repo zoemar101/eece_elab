@@ -1,12 +1,13 @@
 {% extends "dashboard.html" %}
 {% block logs %}
+<script type="text/javascript" src="../static/js/features/item.js"></script>
 <div class="request-page-def">
     <div class="row">
         <div class="col-md-2"><span class="request-text"> Logs </span></div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <table>
+            <table class="table" id="logsTable">
                 <thead>
                     <tr>
                         <th>ID Number</th>

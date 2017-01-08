@@ -1,5 +1,6 @@
 {% extends "dashboard.html" %}
 {% block request %}
+<link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
 <script type="text/javascript" src="../static/js/request.js" xmlns="http://www.w3.org/1999/html"></script>
 <script type="text/javascript" src="../static/js/features/item.js"></script>
 <script type="text/javascript" src="../static/js/features/request.js"></script>
@@ -25,7 +26,7 @@
         <tbody>
             <!-- Jinja Here: GET requests from DB -->
             {% for r in req %}
-            <tr data-toggle="modal" data-target="#{{ r[0] }}" onclick="getReq({{ r[0] }})">
+            <tr data-toggle="modal" data-target="#inModal" onclick="getReq({{ r[0] }})">
                 <td>{{ r[1] }}</td>
                 <td>{{ r[3] }}</td>
                 <td>{{ r[4] }}</td>
@@ -41,7 +42,35 @@
             </tbody>
         </table>
         </div>
-         <div id="inModal"></div>
+         <div id="inModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">REQUEST <span id="reqrID"></span></h4>
+                      </div>
+                      <div class="modal-body">
+                            <div id="reqrName"></div>
+                            <table class="table" id="reqItems">
+                                <thead>
+                                    <td>Qnty</td>
+                                    <td>Code</td>
+                                    <td>Equipment</td>
+                                    <td></td>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                      </div>
+                      <div class="modal-footer">
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                    </div>
     </div>
 </div>
 </div>

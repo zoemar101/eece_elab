@@ -81,16 +81,16 @@ class zeebuks(Flask):
 
     @app.route('/getReq', methods=['GET'])
     def getReq():
-        id = request.args.get('getid')
+        requestId = request.args.get('getid')
         con = sqlite3.connect("ZeeSlipv2.sqlite")
         con.row_factory = sqlite3.Row
         cur = con.cursor()
-        cur.execute("SELECT  BorrowedItem.itemQuantity , itemName FROM Item, BorrowedItem, Request, Borrower WHERE Borrower.borrowerIdNumber = ? AND BorrowedItem.requestId = Borrower.requestId AND BorrowedItem.itemId = Item.itemId ", [id])
+        cur.execute("SELECT * FROM (SELECT Request.requestId, Request.idNumber, Request.name, Request.subject, Request.requestDate, itemId, itemCode, itemName, itemDescription, itemQuantity, itemAvailable, issueDate, returnDate FROM (SELECT BorrowedItem.itemId,itemCode,itemName,itemDescription,BorrowedItem.itemQuantity, COALESCE((Item.itemQuantity - (SELECT SUM(BorrowedItem.itemQuantity) FROM BorrowedItem WHERE Item.itemId = BorrowedItem.itemId AND requestId IN (SELECT BorrowedItem.requestId FROM BorrowedItem WHERE BorrowedItem.issueDate IS NOT NULL AND returnDate IS NULL AND Item.itemId = BorrowedItem.itemId))),Item.itemQuantity) as itemAvailable, BorrowedItem.issueDate,BorrowedItem.returnDate,BorrowedItem.requestId as request FROM BorrowedItem,Item WHERE BorrowedItem.itemId = Item.itemId) LEFT JOIN Request ON request = Request.requestId WHERE returnDate IS NULL ORDER BY requestId ASC) WHERE requestId = ?",[requestId])
         borrowedlist = cur.fetchall()
         res = []
         for r in borrowedlist:
-            res.append({'iq': r[0], 'iname': r[1]})
-        return jsonify({'res': res})
+            res.append({'id': r[1], 'iname': r[2], 'subject':r[3], 'itemcode':r[6], 'itemname':r[7], 'itemquan': r[9]})
+        return jsonify({'res': res, 'count': len(res)})
 
     @app.route('/dashboard/items')
     def items():
