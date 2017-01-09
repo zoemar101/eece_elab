@@ -80,3 +80,33 @@ function initItems(){
   } );
 
 }
+
+function getReqItem(){
+    var array = $.map($('table tr'),function(val,i){
+      var obj = {};
+      obj[$(val).find('td:first').text()] = $(val).find('td:last').text();
+      return obj;
+    });
+    array.shift()
+    //alert(JSON.stringify(array))
+
+    submitReq(array)
+
+}
+
+function submitReq(list){
+    reqidnum = $("#rqidnumber").val()
+    reqname = $("#rqname").val()
+    reqsub = $("#rqsubject").val()
+
+    $.ajax({
+        url: 'http://127.0.0.1:5000/submitRequest',
+        type: "GET",
+        data: {parid: reqidnum, parname: reqname, parsub:reqsub, parlist:list},
+        success: function (resp) {
+            l = resp.list
+            alert(l)
+        }
+    })
+
+}

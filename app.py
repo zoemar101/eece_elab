@@ -174,13 +174,20 @@ class zeebuks(Flask):
 
         return "ok"
 
-    @app.route('/submitRequest', methods=['POST'])
+    @app.route('/submitRequest', methods=['GET'])
     def submitRequest():
-            idNumber =  request.form['rqisnumber']
-            name = request.form['rqname']
-            subject = request.form['rqsubject']
-            borroweditems = [] #list of tuples sa borrowed items i.e. [(121,10), ..., ]
-            if request.method == 'POST':
+            idNumber =  request.args.get('parid')
+            name = request.args.get('parname')
+            subject = request.args.get('parsub')
+            borroweditems = request.args.get('parlist')
+
+            #borroweditems = [] #list of tuples sa borrowed items i.e. [(121,10), ..., ]
+            kl = []
+
+
+            return jsonify({'list': borroweditems})
+
+            """if request.method == 'POST':
                 with sqlite3.connect("ZeeSlipv2.sqlite") as con:
                     cur = con.cursor()
                     cur.execute("INSERT INTO Request (idNumber,name,subject,requestDate) VALUES (?,?,?,?)", (idNumber,name,subject,"datetime(CURRENT_TIMESTAMP,'localtime')"))
@@ -188,14 +195,14 @@ class zeebuks(Flask):
                     cur.executemany("INSERT INTO BorrowedItem(itemId,itemQuantity,requestId) VALUES (?,?,(SELECT requestId FROM Request ORDER BY requestID DESC LIMIT 1))", borroweditems)
                     con.commit()
                     con.close()
-            return redirect('dashboard/barrow')
+            return redirect('dashboard/barrow')"""
 
     @app.route('/deleteRequest', methods=['GET'])
     def deleteRequest():
         requestId =  request.args.get('delreqid')
         with sqlite3.connect("ZeeSlipv2.sqlite") as con:
             cur = con.cursor()
-            cur.execute("DELETE FROM Request WHERE requestId = ? AND EXISTS(SELECT requestId FROM (SELECT requestId FROM Request) LEFT JOIN (SELECT requestId as issuedRequestId FROM BorrowedItem WHERE issueDate IS NOT NULL) WHERE requestId != issuedRequestId)",[requestId])
+            cur.execute("DELETE FROM Request WHERE requestId = ? AND EXISTS(SELECT requestId FROM (SELECT requestId FROM Request) LEFT JOIN (SELECT requestId as issuedRequestId FROM BorrowedItem WHERE issueDate IS NULL) WHERE requestId != issuedRequestId)",[requestId])
             con.commit()
 
         return "ok"

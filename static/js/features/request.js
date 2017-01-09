@@ -12,9 +12,9 @@ function getReq(id){
                 $("#reqItems tr").remove();
                 $("#reqrID").text(recs.res[0].id)
 
-                var bt = '<button class="btn btn-danger" onclick="deleteReq('+ recs.res[0].reqID +')">DELETE REQUEST</button>'
-                $("#deleteREQ").empty()
-                document.getElementById('deleteREQ').innerHTML = bt;
+                var bt = '<button id="deleter" class="btn btn-danger" onclick="deleteReq('+ recs.res[0].reqID +')">DELETE REQUEST</button>'
+                                $("#deleteREQ").empty()
+                                document.getElementById('deleteREQ').innerHTML = bt;
 
 
                 for (i = 0; i < recs.count; i++){
@@ -41,9 +41,11 @@ function getReq(id){
 
                             if( issdate == null ){
                                 cell4.innerHTML = '<button class="btn btn-default" onclick="issueItem('+britemid+')"> Release '+ britemid +' </button>'
+
                             }
                             else{
                                 cell4.innerHTML = '<button class="btn btn-default" onclick="returnItem(' + britemid + ')"> Return </button>'
+                                document.getElementById("deleter").disabled = true;
                             }
 
                 }
