@@ -60,7 +60,7 @@ class zeebuks(Flask):
         con.row_factory = sqlite3.Row
 
         cur = con.cursor()
-        cur.execute("SELECT itemId,itemCode,itemName,itemDescription,(Item.itemQuantity - (SELECT SUM(BorrowedItem.itemQuantity) FROM BorrowedItem WHERE Item.itemId = BorrowedItem.itemId AND requestId IN (SELECT requestId FROM Request WHERE returnDate IS NULL))) as available FROM Item WHERE available > 0")
+        cur.execute("SELECT itemId,itemCode,itemName,itemDescription,COALESCE((Item.itemQuantity - (SELECT SUM(BorrowedItem.itemQuantity) FROM BorrowedItem WHERE Item.itemId = BorrowedItem.itemId AND requestId IN (SELECT BorrowedItem.requestId FROM BorrowedItem WHERE BorrowedItem.issueDate IS NOT NULL AND returnDate IS NULL AND Item.itemId = BorrowedItem.itemId))),Item.itemQuantity) as itemAvailable FROM Item WHERE itemAvailable > 0")
 
         rows = cur.fetchall();
 
@@ -73,7 +73,7 @@ class zeebuks(Flask):
         con = sqlite3.connect("ZeeSlipv2.sqlite")
         con.row_factory = sqlite3.Row
         cur = con.cursor()
-        cur.execute("SELECT Request.requestId, Request.idNumber, Request.name, Request.subject, Request.requestDate, itemId, itemCode, itemName, itemDescription, itemQuantity, itemAvailable, issueDate, returnDate FROM (SELECT BorrowedItem.itemId,itemCode,itemName,itemDescription,BorrowedItem.itemQuantity, COALESCE((Item.itemQuantity - (SELECT SUM(BorrowedItem.itemQuantity) FROM BorrowedItem WHERE Item.itemId = BorrowedItem.itemId AND requestId IN (SELECT BorrowedItem.requestId FROM BorrowedItem WHERE BorrowedItem.issueDate IS NOT NULL AND returnDate IS NULL AND Item.itemId = BorrowedItem.itemId))),Item.itemQuantity) as itemAvailable, BorrowedItem.issueDate,BorrowedItem.returnDate,BorrowedItem.requestId as request FROM BorrowedItem,Item WHERE BorrowedItem.itemId = Item.itemId) LEFT JOIN Request ON request = Request.requestId WHERE returnDate IS NULL GROUP BY requestId")
+        cur.execute("SELECT Request.requestId, Request.idNumber, Request.name, Request.subject, Request.requestDate, itemId, itemCode, itemName, itemDescription, itemQuantity, itemAvailable, issueDate, returnDate FROM (SELECT BorrowedItem.itemId,itemCode,itemName,itemDescription,BorrowedItem.itemQuantity, COALESCE((Item.itemQuantity - (SELECT SUM(BorrowedItem.itemQuantity) FROM BorrowedItem WHERE Item.itemId = BorrowedItem.itemId AND requestId IN (SELECT BorrowedItem.requestId FROM BorrowedItem WHERE BorrowedItem.issueDate IS NOT NULL AND returnDate IS NULL AND Item.itemId = BorrowedItem.itemId))),Item.itemQuantity) as itemAvailable, BorrowedItem.issueDate,BorrowedItem.returnDate,BorrowedItem.requestId as request FROM BorrowedItem,Item WHERE BorrowedItem.itemId = Item.itemId) LEFT JOIN Request ON request = Request.requestId WHERE requestID IS NOT NULL AND returnDate IS NULL GROUP BY requestId")
         rows = cur.fetchall()
 
         return render_template('modules/request.html', req = rows)
@@ -85,11 +85,11 @@ class zeebuks(Flask):
         con = sqlite3.connect("ZeeSlipv2.sqlite")
         con.row_factory = sqlite3.Row
         cur = con.cursor()
-        cur.execute("SELECT * FROM (SELECT Request.requestId, Request.idNumber, Request.name, Request.subject, Request.requestDate, itemId, itemCode, itemName, itemDescription, itemQuantity, itemAvailable, issueDate, returnDate FROM (SELECT BorrowedItem.itemId,itemCode,itemName,itemDescription,BorrowedItem.itemQuantity, COALESCE((Item.itemQuantity - (SELECT SUM(BorrowedItem.itemQuantity) FROM BorrowedItem WHERE Item.itemId = BorrowedItem.itemId AND requestId IN (SELECT BorrowedItem.requestId FROM BorrowedItem WHERE BorrowedItem.issueDate IS NOT NULL AND returnDate IS NULL AND Item.itemId = BorrowedItem.itemId))),Item.itemQuantity) as itemAvailable, BorrowedItem.issueDate,BorrowedItem.returnDate,BorrowedItem.requestId as request FROM BorrowedItem,Item WHERE BorrowedItem.itemId = Item.itemId) LEFT JOIN Request ON request = Request.requestId WHERE returnDate IS NULL ORDER BY requestId ASC) WHERE requestId = ?",[requestId])
+        cur.execute("SELECT * FROM (SELECT Request.requestId, Request.idNumber, Request.name, Request.subject, Request.requestDate, borrowedItemId,itemId, itemCode, itemName, itemDescription, itemQuantity, itemAvailable, issueDate, returnDate FROM (SELECT BorrowedItem.borrowedItemId,BorrowedItem.itemId,itemCode,itemName,itemDescription,BorrowedItem.itemQuantity, COALESCE((Item.itemQuantity - (SELECT SUM(BorrowedItem.itemQuantity) FROM BorrowedItem WHERE Item.itemId = BorrowedItem.itemId AND requestId IN (SELECT BorrowedItem.requestId FROM BorrowedItem WHERE BorrowedItem.issueDate IS NOT NULL AND returnDate IS NULL AND Item.itemId = BorrowedItem.itemId))),Item.itemQuantity) as itemAvailable, BorrowedItem.issueDate,BorrowedItem.returnDate,BorrowedItem.requestId as request FROM BorrowedItem,Item WHERE BorrowedItem.itemId = Item.itemId) LEFT JOIN Request ON request = Request.requestId WHERE returnDate IS NULL ORDER BY requestId ASC) WHERE requestId = ?",[requestId])
         borrowedlist = cur.fetchall()
         res = []
         for r in borrowedlist:
-            res.append({'reqID': r[0], 'id': r[1], 'iname': r[2], 'subject':r[3], 'itemID': r[5], 'itemcode':r[6], 'itemname':r[7], 'itemquan': r[9], 'issDate': r[11]})
+            res.append({'reqID': r[0], 'id': r[1], 'iname': r[2], 'subject':r[3],'britemid':r[5], 'itemID': r[6], 'itemcode':r[7], 'itemname':r[8], 'itemquan': r[10], 'issDate': r[12]})
         return jsonify({'res': res, 'count': len(res)})
 
     @app.route('/dashboard/items')

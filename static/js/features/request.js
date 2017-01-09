@@ -23,6 +23,8 @@ function getReq(id){
                         itmName = recs.res[i].itemname
                         issdate = recs.res[i].issDate
                         itmID = recs.res[i].itemID
+                        britemid = recs.res[i].britemid
+                        console.log(britemid)
 
 
                         var x = document.getElementById("reqItems").rows.length;
@@ -38,10 +40,10 @@ function getReq(id){
                             cell3.innerHTML = itmName;
 
                             if( issdate == null ){
-                                cell4.innerHTML = '<button class="btn btn-default" onclick="issueItem(itmID)"> Release </button>'
+                                cell4.innerHTML = '<button class="btn btn-default" onclick="issueItem('+britemid+')"> Release '+ britemid +' </button>'
                             }
                             else{
-                                cell4.innerHTML = '<button class="btn btn-default" onclick="returnItem(itmID)"> Return </button>'
+                                cell4.innerHTML = '<button class="btn btn-default" onclick="returnItem(' + britemid + ')"> Return </button>'
                             }
 
                 }
