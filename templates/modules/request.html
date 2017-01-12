@@ -19,7 +19,7 @@
                 <th>Subject</th>
                 <th>Date Request</th>
                 <th>Date/Time Release</th>
-                <th>Date/Time Return</th>
+
                 <th>Status</th>
             </tr>
             </thead>
@@ -31,7 +31,7 @@
                 <td>{{ r[3] }}</td>
                 <td>{{ r[4] }}</td>
                 <td>{{ r[11] }}</td>
-                <td>{{ r[12] }}</td>
+
                 {% if r[11] == None %}
                 <td style="color: red">Pending</td>
                 {% else %}

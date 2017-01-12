@@ -1,4 +1,5 @@
 //window.onload = initItems()
+ var array;
 function addMembers() {
     var x = document.getElementById("members").rows.length;
     var id = $("#memId").val();
@@ -82,31 +83,38 @@ function initItems(){
 }
 
 function getReqItem(){
-    var array = $.map($('table tr'),function(val,i){
+    array = $.map($('table tr'),function(val,i){
       var obj = {};
       obj[$(val).find('td:first').text()] = $(val).find('td:last').text();
       return obj;
     });
     array.shift()
     //alert(JSON.stringify(array))
+    array = JSON.stringify(array)
 
-    submitReq(array)
+    li = JSON.parse(array)
+    submitReq()
 
 }
 
-function submitReq(list){
+function submitReq(){
     reqidnum = $("#rqidnumber").val()
     reqname = $("#rqname").val()
     reqsub = $("#rqsubject").val()
-
+    //alert(array)
     $.ajax({
         url: 'http://127.0.0.1:5000/submitRequest',
         type: "GET",
-        data: {parid: reqidnum, parname: reqname, parsub:reqsub, parlist:list},
+        data: {parlist:array, parid:reqidnum, parname:reqname,parsub:reqsub},
         success: function (resp) {
-            l = resp.list
-            alert(l)
+            /*l = resp.listahan[0]
+            l1 = resp.sulod
+            l2 = JSON.stringify(l1);
+            //alert(list)
+            alert(l1)*/
+            alert("Request Submitted!!")
         }
     })
 
 }
+

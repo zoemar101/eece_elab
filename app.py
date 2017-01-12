@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify, json
 from model import DBConn
 import  sqlite3
 
@@ -183,19 +183,38 @@ class zeebuks(Flask):
 
             #borroweditems = [] #list of tuples sa borrowed items i.e. [(121,10), ..., ]
             kl = []
+            sl = []
+            result = json.loads(borroweditems)
+            l1 = result[0] #{"1":"74HC02G"}
 
+            l2 = str(l1)
+            for char in "[{' }]":
+                 l2 = l2.replace(char, '')
 
-            return jsonify({'list': borroweditems})
+            a = l2.split(':')
+            b= a[1]
+            print(b[1:])
 
-            """if request.method == 'POST':
+            if request.method == 'GET':
                 with sqlite3.connect("ZeeSlipv2.sqlite") as con:
                     cur = con.cursor()
-                    cur.execute("INSERT INTO Request (idNumber,name,subject,requestDate) VALUES (?,?,?,?)", (idNumber,name,subject,"datetime(CURRENT_TIMESTAMP,'localtime')"))
+                    cur.execute("INSERT INTO Request (idNumber,name,subject,requestDate) VALUES (?,?,?,datetime(CURRENT_TIMESTAMP,'localtime'))", (idNumber,name,subject))
                     con.commit()
-                    cur.executemany("INSERT INTO BorrowedItem(itemId,itemQuantity,requestId) VALUES (?,?,(SELECT requestId FROM Request ORDER BY requestID DESC LIMIT 1))", borroweditems)
-                    con.commit()
-                    con.close()
-            return redirect('dashboard/barrow')"""
+
+                    cur = con.cursor()
+                    for i in result:
+                        print(i)
+                        z = str(i)
+                        for char in "[{' }]":
+                            z = z.replace(char, '')
+                        x = z.split(':')
+                        print(x)
+
+                        cur.execute("INSERT INTO BorrowedItem(itemId,itemQuantity,requestId) VALUES (?,?,(SELECT requestId FROM Request ORDER BY requestID DESC LIMIT 1))", (x[0][1:], x[1][1:]))
+                        con.commit()
+
+            return jsonify({'listahan': l2, 'sulod': l1})
+
 
     @app.route('/deleteRequest', methods=['GET'])
     def deleteRequest():
