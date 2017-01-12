@@ -845,6 +845,7 @@
 .alertify-notifier .ajs-message.ajs-success {
     background: #4b8c00;
     text-align: center;
+    color: #ffffff;
 }
 .alertify-notifier .ajs-message.ajs-error {
      background: #C60000;

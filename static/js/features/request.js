@@ -40,11 +40,11 @@ function getReq(id){
                             cell3.innerHTML = itmName;
 
                             if( issdate == null ){
-                                cell4.innerHTML = '<button class="btn btn-default" onclick="issueItem('+britemid+')"> Release '+ britemid +' </button>'
+                                cell4.innerHTML = '<button class="btn btn-default" onclick="notifya();issueItem('+britemid+')"> Release '+ britemid +' </button>'
 
                             }
                             else{
-                                cell4.innerHTML = '<button class="btn btn-default" onclick="returnItem(' + britemid + ')"> Return </button>'
+                                cell4.innerHTML = '<button class="btn btn-default" onclick="notifyRETURN();returnItem(' + britemid + ')"> Return </button>'
                                 document.getElementById("deleter").disabled = true;
                             }
 
@@ -63,9 +63,10 @@ function deleteReq(id){
         data: {delreqid: id},
         success: function (recs) {
             console.log("ok")
-            location.reload()
+            //location.reload()
         }
     })
+     location.reload()
 }
 
 function issueItem(id){
@@ -93,4 +94,12 @@ function returnItem(id){
             console.log("ok")
         }
     })
+}
+
+function notifya(){
+    alertify.success("Item Release !! :)");
+}
+
+function notifyRETURN(){
+    alertify.success("Item Return !! :)");
 }
