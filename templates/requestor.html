@@ -36,32 +36,32 @@
           </div>
         </nav>
     </section>
-    <form>
 
+    <form>
         <div class="container req-form-content bg-req-form ">
             <div class="row">
                 <div class="col-md-3">
                 <div class="form-group ui-widget">
                     <label for="rqidnumber">ID Number</label>
-                    <input type="text" class="form-control req-input-size" id="rqidnumber" name="rqidnumber">
+                    <input type="text" class="form-control req-input-size" id="rqidnumber" name="rqidnumber" required>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
                     <label for="rqname">Name</label>
-                    <input type="text" class="form-control req-input-size" id="rqname" name = "rqname">
+                    <input type="text" class="form-control req-input-size" id="rqname" name = "rqname" required>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
                     <label for="rqsubject">Subject</label>
-                    <input type="text" class="form-control req-input-size" id="rqsubject" name="rqsubject">
+                    <input type="text" class="form-control req-input-size" id="rqsubject" name="rqsubject" required>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
                     <label for="rqins">Instuctor</label>
-                    <input type="text" class="form-control req-input-size" id="rqins" name="rqins">
+                    <input type="text" class="form-control req-input-size" id="rqins" name="rqins" >
                 </div>
             </div>
             </div>
@@ -70,10 +70,10 @@
 
             <div class="col-md-offset-1 col-md-6">
             <div class="req-form-content">
-                <label>Items Barrowed</label>
+                <label>Items Barrowed</label><span id="errTable" style=" display: none; color: red"> *NO Item Requested </span>
                  <div class="row">
                     <div class="col-sm-8">
-                    <input list="litems" id="llitems" name="llitem" class="form-control" placeholder="Search Equipment">
+                    <input list="litems" id="llitems" name="llitem" class="form-control" placeholder="Search Equipment" >
                     <datalist id="litems">
                         {% for r in list %}
                             <option value="{{ r[2] }}">
@@ -93,6 +93,7 @@
                         </thead>
 
                     </table>
+
                 </div>
 
             </div>

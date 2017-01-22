@@ -101,8 +101,20 @@ function submitReq(){
     reqidnum = $("#rqidnumber").val()
     reqname = $("#rqname").val()
     reqsub = $("#rqsubject").val()
+    var x = document.getElementById("reqEpt").rows.length;
     //alert(array)
-    $.ajax({
+
+    if (reqidnum == ""){
+        console.log("wala")
+    }else if(reqname == ""){
+        console.log("wala")
+    }else if (reqsub == "") {
+        console.log("wala")
+    }else if(x == 1){
+        $("#errTable").show()
+    }else
+    {
+        $.ajax({
         url: 'http://127.0.0.1:5000/submitRequest',
         type: "GET",
         data: {parlist:array, parid:reqidnum, parname:reqname,parsub:reqsub},
@@ -115,6 +127,7 @@ function submitReq(){
             alert("Request Submitted!!")
         }
     })
+    }
 
 }
 
